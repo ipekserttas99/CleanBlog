@@ -25,14 +25,14 @@
         <% for (let i = 0; i < posts.length; i++) { %>
 
         <div class="post-preview">
+          <a href="/posts/<%= posts[i]._id %> ">
             <h2 class="post-title">
               <%= posts[i].name %>
             </h2>
-            <p class="post-meta">
-              <%= posts[i].message %>
-            </p>
+            <p><%= posts[i].message.substring(0, 100) %>...</p>
+          </a>
           
-          <p class="post-meta">Posted on <%= posts[i].dateCreated %></p>
+          <p class="post-meta">Posted on <%= posts[i].dateCreated.toString().substring(0, 15) %></p>
         </div>
         <hr>
         
